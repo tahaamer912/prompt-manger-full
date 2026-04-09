@@ -91,4 +91,4 @@ prompt-manger-full/
 - Modern Browser (Chrome, Firefox, Edge)
 
 ---
-*Built with ❤️ by Antigravity*
+made it by taha amer
