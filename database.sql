@@ -1,5 +1,4 @@
-CREATE DATABASE IF NOT EXISTS prompt_app;
-USE prompt_app;
+-- Table structures for the prompt management app
 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
