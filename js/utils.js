@@ -1,6 +1,6 @@
-// ===== DATA MANAGEMENT =====
-// NOTE: We now fetch categories and prompts from the backend API via API.js.
-// Categories and prompts should ideally be fetched when needed rather than on load here.
+
+
+
 
 async function getCategories() {
   const response = await API.categories.list();
@@ -18,11 +18,11 @@ async function getPrompts() {
   return [];
 }
 
-// These are now handled by API calls in their respective page JS files
+
 function savePrompts(prompts) {}
 function saveCategories(categories) {}
 
-// ===== THEME =====
+
 function initTheme() {
   const theme = localStorage.getItem("theme") || "dark";
   document.documentElement.setAttribute("data-theme", theme);
@@ -46,9 +46,9 @@ function updateThemeIcon(theme) {
   }
 }
 
-// ===== AUTH =====
-// checkAuth is now used differently; the server handles session checks via PHP.
-// But this is still useful for frontend-only state checks if needed.
+
+
+
 async function checkAuth() {
   const status = await API.auth.status();
   if (!status.success && !window.location.pathname.includes('auth/')) {
@@ -63,7 +63,7 @@ async function logout() {
   window.location.href = loginPath;
 }
 
-// Helper for escaping HTML
+
 function escapeHtml(unsafe) {
   if (!unsafe) return "";
   return unsafe
@@ -76,7 +76,7 @@ function escapeHtml(unsafe) {
     .replace(/\n/g, "\\n");
 }
 
-// ===== TOAST NOTIFICATIONS =====
+
 function showToast(message, type = 'success') {
   let container = document.querySelector('.toast-container');
   if (!container) {
@@ -105,6 +105,6 @@ function showToast(message, type = 'success') {
   }, 3000);
 }
 
-// Initialize on load
+
 initTheme();
 

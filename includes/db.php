@@ -1,15 +1,15 @@
 <?php
-// Environment Detection
+
 $is_local = ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1' || $_SERVER['SERVER_NAME'] == 'localhost');
 
 if ($is_local) {
-    // Local Settings (XAMPP)
+    
     $host = "localhost";
     $username = "root";
     $password = "";
     $dbname = "prompt_app";
 } else {
-    // Production Settings (InfinityFree)
+    
     $host = "sql210.byetcluster.com";
     $username = "if0_41624198";
     $password = "YOUR_DB_PASSWORD"; 
@@ -19,7 +19,7 @@ if ($is_local) {
 mysqli_report(MYSQLI_REPORT_OFF);
 $conn = @new mysqli($host, $username, $password, $dbname);
 
-// Helper function for JSON responses
+
 function sendResponse($success, $message, $data = null) {
     if (!headers_sent()) {
         header('Content-Type: application/json');

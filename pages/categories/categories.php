@@ -39,7 +39,7 @@ if (!isset($_SESSION['user_id'])) {
           <h3 class="mb-2">Your Categories</h3>
           <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Default categories cannot be deleted.</p>
           <ul id="categoryList" style="list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0;">
-            <!-- Categories will be dynamically loaded here -->
+            
           </ul>
         </div>
       </div>

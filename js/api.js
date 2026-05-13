@@ -17,7 +17,7 @@ const API = {
             
             const data = await response.json();
             if (!data.success) {
-                // If unauthorized and not on auth pages, redirect to login
+                
                 if (data.message === "Authentication required." && !window.location.pathname.includes('auth/')) {
                     const loginPath = window.location.pathname.includes('/pages/') ? '../auth/login.php' : 'pages/auth/login.php';
                     window.location.href = loginPath;

@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             sendResponse(false, "All fields are required.");
         }
         
-        // Check if user already exists
+        
         $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -23,10 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             sendResponse(false, "User with this email already exists.");
         }
         
-        // Hash password
+        
         $hashed = password_hash($password, PASSWORD_DEFAULT);
         
-        // Create user
+        
         $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $username, $email, $hashed);
         
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             sendResponse(false, "Username and Email are required.");
         }
         
-        // Check if email is taken by another user
+        
         $stmt = $conn->prepare("SELECT id FROM users WHERE email = ? AND id != ?");
         $stmt->bind_param("si", $email, $user_id);
         $stmt->execute();

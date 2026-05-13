@@ -16,10 +16,10 @@ if (!isset($_SESSION['user_id'])) {
 <body onload="initPromptsPage()">
 
 <div class="dashboard-layout">
-  <!-- Sidebar Container -->
+  
   <div class="sidebar-container"></div>
 
-  <!-- Main Content -->
+  
   <div class="main-wrapper">
     <header class="dashboard-header">
       <div class="header-title">
@@ -40,7 +40,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         
         <div id="prompts" class="grid-container">
-          <!-- Prompts will be dynamically loaded here -->
+          
         </div>
 
         <div id="pagination" class="pagination"></div>

@@ -29,7 +29,7 @@
         </div>
 
         <div id="publicPrompts" class="grid-container">
-          <!-- Public prompts will be loaded here -->
+          
         </div>
 
         <div id="pagination" class="pagination"></div>

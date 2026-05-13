@@ -6,7 +6,7 @@ async function injectSidebar() {
   const urlParams = new URLSearchParams(window.location.search);
   const isPublicView = urlParams.get('view') === 'public' || currentPath.includes('public.php');
   
-  // Calculate relative paths
+  
   const isAtRoot = !currentPath.includes('/pages/');
   const pathPrefix = isAtRoot ? 'pages/' : '../';
 

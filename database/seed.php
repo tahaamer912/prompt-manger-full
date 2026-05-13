@@ -3,7 +3,7 @@ require_once __DIR__ . "/../includes/db.php";
 
 echo "Starting database seeding...\n";
 
-// 1. Create a demo user if doesn't exist
+
 $demo_username = "demo_user";
 $demo_email = "demo@example.com";
 $demo_password = password_hash("password123", PASSWORD_DEFAULT);
@@ -25,7 +25,7 @@ if (!$user) {
     echo "Demo user already exists (ID: $user_id).\n";
 }
 
-// 2. Define and Ensure Categories Exist
+
 $default_categories = [
     'Marketing', 'Programming', 'Content Writing', 'Productivity', 
     'Creative Writing', 'Academic', 'Data Analysis', 'SEO', 
@@ -47,7 +47,7 @@ while ($row = $result->fetch_assoc()) {
 }
 echo "Categories ensured.\n";
 
-// 3. Define sample prompts
+
 $sample_prompts = [
     [
         'title' => 'SEO Meta Description Generator',
@@ -111,10 +111,10 @@ $sample_prompts = [
     ]
 ];
 
-// 4. Insert prompts
+
 $inserted_count = 0;
 foreach ($sample_prompts as $prompt) {
-    // Skip if prompt title already exists for this user (simple check)
+    
     $check_stmt = $conn->prepare("SELECT id FROM prompts WHERE title = ? AND user_id = ?");
     $check_stmt->bind_param("si", $prompt['title'], $user_id);
     $check_stmt->execute();

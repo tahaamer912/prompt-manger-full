@@ -8,14 +8,14 @@ async function initEditPage() {
         return;
     }
 
-    // Load categories first
+    
     const catResponse = await API.categories.list();
     const select = document.getElementById('category');
     if (select && catResponse.success) {
         select.innerHTML = catResponse.data.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
     }
 
-    // Load prompt data
+    
     const response = await API.prompts.get(id);
     if (response.success) {
         const prompt = response.data;

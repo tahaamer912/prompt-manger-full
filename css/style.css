@@ -1,6 +1,6 @@
-/* Modern Dashboard UI System - Optimized & Refactored */
+
 :root {
-  /* Colors - Dark (Default) */
+  
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-card: rgba(30, 41, 59, 0.7);
@@ -23,7 +23,7 @@
   --search-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2394a3b8" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>');
 }
 
-/* Light Theme Variables */
+
 html[data-theme="light"] {
   --bg-primary: #f1f5f9;
   --bg-secondary: #ffffff;
@@ -55,7 +55,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Typography */
+
 h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; }
 h2 { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.3; }
 h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); line-height: 1.4; }
@@ -81,7 +81,7 @@ a:hover {
   color: var(--accent);
 }
 
-/* Layout: Dashboard System */
+
 .dashboard-layout {
   display: flex;
   height: 100vh;
@@ -307,7 +307,7 @@ a:hover {
   flex-direction: column;
 }
 
-/* Components: Cards */
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -383,7 +383,7 @@ a:hover {
   margin-top: auto;
 }
 
-/* Components: Buttons */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -450,7 +450,7 @@ html[data-theme="light"] .btn-icon {
   color: var(--text-primary);
 }
 
-/* Forms */
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -500,7 +500,7 @@ textarea.form-control {
   transition: var(--transition);
 }
 
-/* Auth Pages Styling */
+
 .auth-layout {
   display: flex;
   align-items: center;
@@ -642,7 +642,7 @@ textarea.form-control {
   pointer-events: auto;
 }
 
-/* Landing Page Styling */
+
 .landing-nav {
   display: flex;
   justify-content: space-between;
@@ -690,7 +690,7 @@ textarea.form-control {
   }
 }
 
-/* Utility Classes */
+
 .tag {
   display: inline-block;
   padding: 4px 10px;
@@ -715,7 +715,7 @@ textarea.form-control {
 .text-center { text-align: center; }
 .center-card { margin: 0 auto; width: 100%; }
 
-/* Toast Notifications */
+
 .toast-container {
   position: fixed;
   top: 24px;
@@ -770,7 +770,7 @@ textarea.form-control {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* Pagination */
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -807,7 +807,7 @@ textarea.form-control {
   border-color: var(--accent);
 }
 
-/* Analytics Specific Styles */
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

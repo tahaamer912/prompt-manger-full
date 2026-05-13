@@ -1,7 +1,7 @@
 <?php 
 require_once "../../includes/db.php"; 
-// View page might be public, but usually accessed from dashboard. 
-// We'll check auth via JS or PHP, but let's allow public prompts to be viewed.
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -5,7 +5,7 @@ let allPrompts = [];
 async function initAnalyticsPage() {
     const response = await API.analytics.get();
     if (response.success) {
-        allPrompts = response.data; // Keep compatibility if needed, but we should use response.data.counts etc.
+        allPrompts = response.data; 
         renderAnalytics(response.data);
     } else {
         showToast("Failed to load analytics data.", "error");
@@ -32,7 +32,7 @@ function renderAnalytics(data) {
     if (categoryChartRef) categoryChartRef.destroy();
     if (publicPrivateChartRef) publicPrivateChartRef.destroy();
 
-    // 1. Pie Chart for Visibility
+    
     publicPrivateChartRef = new Chart(document.getElementById('publicPrivateChart'), {
         type: 'doughnut',
         data: {
@@ -58,7 +58,7 @@ function renderAnalytics(data) {
     const catLabels = categories.map(c => c.category_name);
     const catData = categories.map(c => c.count);
 
-    // 2. Bar Chart for Categories
+    
     categoryChartRef = new Chart(document.getElementById('categoryChart'), {
         type: 'bar',
         data: {
@@ -103,6 +103,6 @@ function renderAnalytics(data) {
 }
 
 window.addEventListener('themeChanged', () => {
-    initAnalyticsPage(); // Re-fetch or re-render
+    initAnalyticsPage(); 
 });
 
